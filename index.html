@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TVK Ward Website</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f5f5;
+color:#222;
+}
+
+/* Navbar */
+
+header{
+background:#E30613;
+position:fixed;
+width:100%;
+top:0;
+left:0;
+z-index:1000;
+}
+
+nav{
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#ffd700;
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+background:url("https://upload.wikimedia.org/wikipedia/commons/c/c9/Tamilaga_Vettri_Kazhagam_%28TVK%29_Flag.png") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+background:#E30613;
+padding:15px 35px;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:black;
+}
+
+/* Sections */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:35px;
+margin-bottom:40px;
+text-align:center;
+color:#E30613;
+}
+
+/* About */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+}
+
+.about p{
+line-height:1.8;
+}
+
+/* Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* Events */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.card h3{
+color:#E30613;
+margin-bottom:10px;
+}
+
+/* Leaders */
+
+.leaders{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.leader{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.leader img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+/* Form */
+
+form{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+button{
+padding:15px 40px;
+background:#E30613;
+border:none;
+color:white;
+border-radius:30px;
+cursor:pointer;
+font-size:17px;
+}
+
+button:hover{
+background:black;
+}
+
+/* Contact */
+
+.contact{
+text-align:center;
+line-height:2;
+}
+
+/* Footer */
+
+footer{
+background:#111;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo"><h6>தமிழக வெற்றிக் கழகம் 
+திருவேற்காடு மேற்கு பகுதி 8ஆவது வார்டு  தகவல் தொழில்நுட்ப அணி</h6></div>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#events">Events</a></li>
+
+<li><a href="#leaders">Leaders</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>தமிழக வெற்றி கழகம்</h1>
+
+<p>Welcome to 8th Ward Official Website</p>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title"></h2>
+
+<div class="about">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 4.10.03 PM.jpeg">
+
+<div>
+
+<p><h3>
+
+இந்த பக்கமானது தமிழக வெற்றிக் கழகத்தின் திருவேற்காடு மேற்கு பகுதி 
+8ஆவது வார்டு  தகவல் தொழில்நுட்ப அணியால் துவக்கப்பட்டது.
+
+</h3></p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 4.10.05 PM.jpeg">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 4.10.04 PM.jpeg">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 12.30.22 AM.jpeg">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-17 at 10.15.41 PM.jpeg">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-21 at 10.08.14 AM.jpeg">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-18 at 8.32.05 AM.jpeg">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-20 at 12.53.51 PM.jpeg">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 1.18.45 PM (1).jpeg">
+
+
+
+</div>
+
+</section>
+
+<section id="events">
+
+<h2 class="section-title">Latest Events</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-25 at 1.42.59 PM.jpeg">
+
+<h3></h3>
+
+<p>கீதாஞ்சலி சேம்பர் உரிமையாளர் திரு. P.V.பாஸ்கர பாபு தமிழக வெற்றிக் கழகத்தில் இணைந்தார்.</p>
+
+</div>
+
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-24 at 11.10.26 AM.jpeg">
+
+<h3></h3>
+
+<p>தொண்டரணி அமைப்பாளர் திரு S.வெங்கடேசன் அவர்களின் இல்ல விழாவிற்கு அழைப்பிதழை வழங்கினார்</p>
+
+</div>
+
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-16 at 12.15.02 PM.jpeg">
+
+<h3></h3>
+
+<p>குடிநீர் குழாயில் ஏற்பட்ட உடைப்பை சரி செய்தார் வட்டச் செயலாளர் சி.தினகரன்</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="leaders">
+
+<h2 class="section-title">Ward Team</h2>
+
+<div class="leaders">
+
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 12.53.501 PM.jpg">
+
+<h3>சி.தினகரன்</h3>
+
+<p> 8 ஆவது வார்டு வட்டச் செயலாளர்</p>
+
+</div>
+
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-20 at 10.55.27 AM.jpeg">
+
+<h3>K.லோகநாதன்</h3>
+
+<p>இணை வட்டச் செயலாளர்</p>
+
+</div>
+
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (1).jpeg">
+
+<h3>B.கருணா மூர்த்தி</h3>
+
+<p>துணை வட்டச் செயலாளர்</p>
+
+</div>
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (2).jpeg">
+
+<h3>R.சதீஷ்குமார்</h3>
+
+<p>துணை வட்டச் செயலாளர்</p>
+
+</div>
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (3).jpeg">
+
+<h3>V.வெங்கடேசன்</h3>
+
+<p>வட்டப் பொருளாளர்</p>
+
+</div>
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (4).jpeg">
+
+<h3>E.தினேஷ்</h3>
+
+<p>இளைஞரணி அமைப்பாளர்</p>
+
+</div>
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (5).jpeg">
+
+<h3>R.புவனேஷ்</h3>
+
+<p>மாணவரணி அமைப்பாளர்</p>
+
+</div>
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (6).jpeg">
+
+<h3>S.வெங்கடேசன்</h3>
+
+<p>தொண்டரணி அமைப்பாளர்</p>
+
+</div>
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-25 at 10.35.05 PM.jpeg">
+
+<h3>ஹரிகிருஷ்ணா பாபு </h3>
+
+<p>தகவல் தொழில்நுட்ப அணி அமைப்பாளர்</p>
+
+</div>
+<div class="card">
+
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (7).jpeg">
+
+<h3>A.சித்ரா</h3>
+
+<p>மகளிர் அணி அமைப்பாளர்</p>
+
+</div>
+
+
+
+
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<p><strong>Address:</strong> TVK Ward Office</p>
+
+<p><strong>Email:</strong> tvk8thward@gmail.com</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 TVK Ward Website | Designed and developed by HK
+
+</footer>
+
+</body>
+
+</html>
