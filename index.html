@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="theme-color" content="#E30613">
-<meta name="description" content="தமிழக வெற்றிக் கழகம் - திருவேற்காடு மேற்கு பகுதி 8ஆவது வார்டு அதிகாரப்பூர்வ இணையதளம்">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TVK Ward Website</title>
- <style>
-.center-img {
-  display: block;       /* Make image a block element */
-  margin-left: auto;    /* Auto margins center it */
-  margin-right: auto;
-  width: 50%;           /* Optional: control size */
-}
-</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -26,19 +19,9 @@ font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
-html,body{
-overflow-x:hidden;
-max-width:100%;
-}
-
 body{
 background:#f5f5f5;
 color:#222;
-}
-
-img{
-max-width:100%;
-height:auto;
 }
 
 /* Navbar */
@@ -50,32 +33,21 @@ width:100%;
 top:0;
 left:0;
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
 nav{
-width:95%;
-max-width: 1300px;
+width:90%;
 margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 15px;
-position:relative;
+padding:15px;
 }
 
-.logo h6{
-font-size:clamp(15px, 2.4vw, 22px);
+.logo{
+font-size:28px;
 font-weight:bold;
 color:white;
-line-height:1.4;
-}
-
-.logo h6 span{
-display:block;
-font-size:clamp(11px, 1.6vw, 14px);
-font-weight:400;
-color:#ffe9a3;
 }
 
 nav ul{
@@ -98,103 +70,64 @@ nav ul li a:hover{
 color:#ffd700;
 }
 
-/* Mobile menu toggle button */
+/* Hero */
 
-.menu-toggle{
-display:none;
-flex-direction:column;
+.hero{
+height:100vh;
+background:url("https://upload.wikimedia.org/wikipedia/commons/c/c9/Tamilaga_Vettri_Kazhagam_%28TVK%29_Flag.png") center/cover;
+display:flex;
 justify-content:center;
 align-items:center;
-gap:5px;
-width:38px;
-height:34px;
-background:none;
-border:none;
-cursor:pointer;
-padding:0;
-flex-shrink:0;
+text-align:center;
+color:white;
+position:relative;
 }
 
-.menu-toggle span{
-display:block;
+.hero::before{
+content:"";
+position:absolute;
 width:100%;
-height:3px;
-background:#fff;
-border-radius:2px;
+height:100%;
+background:rgba(0,0,0,.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+background:#E30613;
+padding:15px 35px;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
 transition:.3s;
 }
 
-.menu-toggle.active span:nth-child(1){
-transform:translateY(8px) rotate(45deg);
-}
-.menu-toggle.active span:nth-child(2){
-opacity:0;
-}
-.menu-toggle.active span:nth-child(3){
-transform:translateY(-8px) rotate(-45deg);
-}
-
-/* Hero */
-
-.hero {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport heights fix mobile shifting */
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url("https://upload.wikimedia.org/wikipedia/commons/c/c9/Tamilaga_Vettri_Kazhagam_%28TVK%29_Flag.png") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 0 20px;
-    margin-top: 60px;
-}
-
-.hero-content {
-    max-width: 800px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.hero h1 {
-    font-size: clamp(28px, 5vw, 55px);
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-}
-
-.hero p {
-    font-size: clamp(14px, 2vw, 20px);
-    margin-bottom: 25px;
-    color: #e0e0e0;
-}
-
-.btn {
-    background: #E30613;
-    padding: 12px 30px;
-    color: #ffd700;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: .3s;
-    display: inline-block;
-}
-
-.btn:hover {
-    background: black;
-    color: white;
+.btn:hover{
+background:black;
 }
 
 /* Sections */
 
 section{
-padding:80px 6% ;
-max-width:1300px;
-margin:0 auto;
+padding:80px 10%;
 }
 
 .section-title{
-font-size:clamp(24px, 4vw, 35px);
+font-size:35px;
 margin-bottom:40px;
 text-align:center;
 color:#E30613;
@@ -216,7 +149,6 @@ border-radius:15px;
 
 .about p{
 line-height:1.8;
-font-size:1.05rem;
 }
 
 /* Gallery */
@@ -243,7 +175,7 @@ transform:scale(1.05);
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
@@ -274,7 +206,7 @@ margin-bottom:10px;
 
 .leaders{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 }
 
@@ -309,7 +241,6 @@ padding:15px;
 margin-bottom:20px;
 border:1px solid #ddd;
 border-radius:10px;
-font-size:16px; /* keeps iOS Safari from auto-zooming on focus */
 }
 
 button{
@@ -333,27 +264,13 @@ text-align:center;
 line-height:2;
 }
 
-.contact a{
-color:#E30613;
-text-decoration:none;
-font-weight:600;
-}
-
 /* Footer */
 
 footer{
 background:#111;
 color:white;
-padding:30px 20px;
+padding:30px;
 text-align:center;
-font-size:14px;
-}
-
-/* Focus visibility for keyboard users */
-a:focus-visible,
-button:focus-visible{
-outline:3px solid #ffd700;
-outline-offset:2px;
 }
 
 @media(max-width:768px){
@@ -362,59 +279,12 @@ outline-offset:2px;
 grid-template-columns:1fr;
 }
 
-.menu-toggle{
-display:flex;
+.hero h1{
+font-size:35px;
 }
 
 nav ul{
 display:none;
-position:absolute;
-top:100%;
-left:0;
-width:100%;
-background:#E30613;
-flex-direction:column;
-text-align:center;
-padding:10px 0;
-box-shadow:0 8px 15px rgba(0,0,0,.2);
-}
-
-nav ul.show{
-display:flex;
-}
-
-nav ul li{
-margin:0;
-}
-
-nav ul li a{
-display:block;
-padding:14px 0;
-}
-
-section{
-padding:60px 6%;
-}
-
-}
-
-@media(max-width:480px){
-
-.logo h6{
-font-size:14px;
-}
-
-.logo h6 span{
-font-size:10.5px;
-}
-
-.leaders{
-grid-template-columns:repeat(2,1fr);
-}
-
-.leader img{
-width:110px;
-height:110px;
 }
 
 }
@@ -429,15 +299,10 @@ height:110px;
 
 <nav>
 
-<div class="logo">
- <h6>தமிழக வெற்றிக் கழகம்<br>
- <span>திருவேற்காடு மேற்கு பகுதி 8ஆவது வார்டு தகவல் தொழில்நுட்ப அணி</span></h6></div>
+<div class="logo"><h6>தமிழக வெற்றிக் கழகம் 
+திருவேற்காடு மேற்கு பகுதி 8ஆவது வார்டு  தகவல் தொழில்நுட்ப அணி</h6></div>
 
-<button class="menu-toggle" id="menuToggle" aria-label="மெனுவைத் திற/மூடு" aria-expanded="false" aria-controls="navList">
-  <span></span><span></span><span></span>
-</button>
-
-<ul id="navList">
+<ul>
 
 <li><a href="#about">About</a></li>
 
@@ -469,20 +334,20 @@ height:110px;
 
 <section id="about">
 
-<h2 class="section-title">எங்களை பற்றி</h2>
+<h2 class="section-title"></h2>
 
 <div class="about">
 
-<img src="WhatsApp Image 2026-06-22 at 4.10.03 PM.jpeg" alt="தமிழக வெற்றிக் கழகம் 8ஆவது வார்டு குழு புகைப்படம்">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 4.10.03 PM.jpeg">
 
 <div>
 
-<p>
+<p><h3>
 
 இந்த பக்கமானது தமிழக வெற்றிக் கழகத்தின் திருவேற்காடு மேற்கு பகுதி 
 8ஆவது வார்டு  தகவல் தொழில்நுட்ப அணியால் துவக்கப்பட்டது.
 
-</p>
+</h3></p>
 
 </div>
 
@@ -496,21 +361,21 @@ height:110px;
 
 <div class="gallery">
 
-<img src="WhatsApp Image 2026-06-22 at 4.10.05 PM.jpeg" alt="TVK 8ஆவது வார்டு நிகழ்வு புகைப்படம் 1">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 4.10.05 PM.jpeg">
 
-<img src="WhatsApp Image 2026-06-22 at 4.10.04 PM.jpeg" alt="TVK 8ஆவது வார்டு நிகழ்வு புகைப்படம் 2">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 4.10.04 PM.jpeg">
 
-<img src="WhatsApp Image 2026-06-22 at 12.30.22 AM.jpeg" alt="TVK 8ஆவது வார்டு நிகழ்வு புகைப்படம் 3">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 12.30.22 AM.jpeg">
 
-<img src="WhatsApp Image 2026-06-17 at 10.15.41 PM.jpeg" alt="TVK 8ஆவது வார்டு நிகழ்வு புகைப்படம் 4">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-17 at 10.15.41 PM.jpeg">
 
-<img src="WhatsApp Image 2026-06-21 at 10.08.14 AM.jpeg" alt="TVK 8ஆவது வார்டு நிகழ்வு புகைப்படம் 5">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-21 at 10.08.14 AM.jpeg">
 
-<img src="WhatsApp Image 2026-06-18 at 8.32.05 AM.jpeg" alt="TVK 8ஆவது வார்டு நிகழ்வு புகைப்படம் 6">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-18 at 8.32.05 AM.jpeg">
 
-<img src="WhatsApp Image 2026-06-20 at 12.53.51 PM.jpeg" alt="TVK 8ஆவது வார்டு நிகழ்வு புகைப்படம் 7">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-20 at 12.53.51 PM.jpeg">
 
-<img src="WhatsApp Image 2026-06-22 at 1.18.45 PM (1).jpeg" alt="TVK 8ஆவது வார்டு நிகழ்வு புகைப்படம் 8">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-22 at 1.18.45 PM (1).jpeg">
 
 
 
@@ -526,9 +391,9 @@ height:110px;
 
 <div class="card">
 
-<img src="WhatsApp Image 2026-06-25 at 1.42.59 PM.jpeg" alt="கீதாஞ்சலி சேம்பர் உரிமையாளர் இணைவு நிகழ்வு">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-25 at 1.42.59 PM.jpeg">
 
-<h3>புதிய உறுப்பினர் இணைவு</h3>
+<h3></h3>
 
 <p>கீதாஞ்சலி சேம்பர் உரிமையாளர் திரு. P.V.பாஸ்கர பாபு தமிழக வெற்றிக் கழகத்தில் இணைந்தார்.</p>
 
@@ -536,9 +401,9 @@ height:110px;
 
 <div class="card">
 
-<img src="WhatsApp Image 2026-06-24 at 11.10.26 AM.jpeg" alt="இல்ல விழா அழைப்பிதழ் வழங்கும் நிகழ்வு">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-24 at 11.10.26 AM.jpeg">
 
-<h3>இல்ல விழா அழைப்பு</h3>
+<h3></h3>
 
 <p>தொண்டரணி அமைப்பாளர் திரு S.வெங்கடேசன் அவர்களின் இல்ல விழாவிற்கு அழைப்பிதழை வழங்கினார்</p>
 
@@ -546,9 +411,9 @@ height:110px;
 
 <div class="card">
 
-<img src="WhatsApp Image 2026-06-16 at 12.15.02 PM.jpeg" alt="குடிநீர் குழாய் பழுது பார்க்கும் பணி">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-16 at 12.15.02 PM.jpeg">
 
-<h3>குடிநீர் பழுது பணி</h3>
+<h3></h3>
 
 <p>குடிநீர் குழாயில் ஏற்பட்ட உடைப்பை சரி செய்தார் வட்டச் செயலாளர் சி.தினகரன்</p>
 
@@ -564,9 +429,9 @@ height:110px;
 
 <div class="leaders">
 
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 12.53.501 PM.jpg" alt="சி.தினகரன் - வட்டச் செயலாளர்">
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 12.53.501 PM.jpg">
 
 <h3>சி.தினகரன்</h3>
 
@@ -574,9 +439,9 @@ height:110px;
 
 </div>
 
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 10.55.27 AM.jpeg" alt="K.லோகநாதன் - இணை வட்டச் செயலாளர்">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-20 at 10.55.27 AM.jpeg">
 
 <h3>K.லோகநாதன்</h3>
 
@@ -584,72 +449,72 @@ height:110px;
 
 </div>
 
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 10.55.27 AM (1).jpeg" alt="B.கருணா மூர்த்தி - துணை வட்டச் செயலாளர்">
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (1).jpeg">
 
 <h3>B.கருணா மூர்த்தி</h3>
 
 <p>துணை வட்டச் செயலாளர்</p>
 
 </div>
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 10.55.27 AM (2).jpeg" alt="R.சதீஷ்குமார் - துணை வட்டச் செயலாளர்">
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (2).jpeg">
 
 <h3>R.சதீஷ்குமார்</h3>
 
 <p>துணை வட்டச் செயலாளர்</p>
 
 </div>
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 10.55.27 AM (3).jpeg" alt="V.வெங்கடேசன் - வட்டப் பொருளாளர்">
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (3).jpeg">
 
 <h3>V.வெங்கடேசன்</h3>
 
 <p>வட்டப் பொருளாளர்</p>
 
 </div>
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 10.55.27 AM (4).jpeg" alt="E.தினேஷ் - இளைஞரணி அமைப்பாளர்">
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (4).jpeg">
 
 <h3>E.தினேஷ்</h3>
 
 <p>இளைஞரணி அமைப்பாளர்</p>
 
 </div>
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 10.55.27 AM (5).jpeg" alt="R.புவனேஷ் - மாணவரணி அமைப்பாளர்">
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (5).jpeg">
 
 <h3>R.புவனேஷ்</h3>
 
 <p>மாணவரணி அமைப்பாளர்</p>
 
 </div>
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 10.55.27 AM (6).jpeg" alt="S.வெங்கடேசன் - தொண்டரணி அமைப்பாளர்">
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (6).jpeg">
 
 <h3>S.வெங்கடேசன்</h3>
 
 <p>தொண்டரணி அமைப்பாளர்</p>
 
 </div>
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-25 at 10.35.05 PM.jpeg" alt="ஹரிகிருஷ்ணா பாபு - தகவல் தொழில்நுட்ப அணி அமைப்பாளர்">
+<img src="C:\Users\Harikrishna Babu\Downloads\WhatsApp Image 2026-06-25 at 10.35.05 PM.jpeg">
 
 <h3>ஹரிகிருஷ்ணா பாபு </h3>
 
 <p>தகவல் தொழில்நுட்ப அணி அமைப்பாளர்</p>
 
 </div>
-<div class="card leader">
+<div class="card">
 
-<img src="WhatsApp Image 2026-06-20 at 10.55.27 AM (7).jpeg" alt="A.சித்ரா - மகளிர் அணி அமைப்பாளர்">
+<img src="C:\Users\Harikrishna Babu\OneDrive\Pictures\WhatsApp Image 2026-06-20 at 10.55.27 AM (7).jpeg">
 
 <h3>A.சித்ரா</h3>
 
@@ -675,7 +540,7 @@ height:110px;
 
 <p><strong>Address:</strong> TVK Ward Office</p>
 
-<p><strong>Email:</strong> <a href="mailto:tvk8thward@gmail.com">tvk8thward@gmail.com</a></p>
+<p><strong>Email:</strong> tvk8thward@gmail.com</p>
 
 </div>
 
@@ -686,28 +551,6 @@ height:110px;
 © 2026 TVK Ward Website | Designed and developed by HK
 
 </footer>
-
-<script>
-(function(){
-  var toggle = document.getElementById('menuToggle');
-  var navList = document.getElementById('navList');
-
-  toggle.addEventListener('click', function(){
-    var isOpen = navList.classList.toggle('show');
-    toggle.classList.toggle('active');
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-
-  // Close the mobile menu after a link is tapped
-  navList.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click', function(){
-      navList.classList.remove('show');
-      toggle.classList.remove('active');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-})();
-</script>
 
 </body>
 
